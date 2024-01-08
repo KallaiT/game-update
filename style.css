@@ -1,0 +1,43 @@
+#gamearea div {
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 110px;
+  margin: 0%;
+  color:brown;
+}
+#gamearea {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+}
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  color: blue;
+  height: 100vh;
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+  background-color: ghostwhite;
+  min-height: 100vh;
+  background-image:url(Retro-Pixel-Art-AI-Generated-4K-Wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.rejtett {
+  visibility: hidden;
+}
+#szamlalo {
+  text-align: center;
+  font-size: 50px;
+}
