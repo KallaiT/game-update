@@ -24,24 +24,23 @@ for (let i = 0; i < 12; i++) {
     if (szamdoboz.innerText == nextnumber) {
       szamdoboz.classList.add("rejtett");
       nextnumber++;
+      if (nextnumber === 13) {
+        clearInterval(intervalId);
+        szamdoboz.removeEventListener('click', clickHandler);
+      }
     }
   });
 }
 
-
+let intervalId;
 const szamlalo = document.querySelector("#szamlalo");
 function onButtonClick(){
-  
-  
   let ido = 0;
-  setInterval(function () {
+  intervalId = setInterval(function () {
     szamlalo.innerText = ido;
     ido++;
-    document.getElementById('button').onclick = ()=> false
   }, 1000);
+  button.removeEventListener('click', onButtonClick);
+} 
   
-  
-    
-}
-  
-button.addEventListener('click', onButtonClick );
+button.addEventListener('click', onButtonClick, { once: true });
